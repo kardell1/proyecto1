@@ -1,0 +1,30 @@
+creacion base de datos - reglas
+La base de datos debe ser declarada de la siguiente manera 
+cada tabla de la base de datos debe ser declarada de forma plural y todo en minuscula 
+si no se tiene creada la base datos se creara automaticamente la base que se ha definido en el archivo de conexion .env
+--------comando: php artisan migration 
+Una vez creada la tabla se debe seguir las reglas gramaticales de declaracion de la tabla. 
+-------comando: php artisan make:migration create_nombre_de_la_tabla_table
+NOTAS.- para la creacion de la base de datos se puede usar un esquema visual que es Worckbench, en este esquema se comprendera visualmente el orden de creacion de las tablas en laravel , ya que es importante el orden de creacion de las tablas.
+Para el llenado de las tablas de base de datos con datos falsos se usa seeders o factoryes , depende del tipo de llenado que uno decida.
+ReglasGramaticales para la creacion de tablas de seeder o factory. 
+---------comando: php artisan make:seeder CategorySeeder
+---------comando: php artisan make:factory CategoryFactory
+notese que la declaracion en la tabla es de categories 
+pero para el seeder o factory de lo declara en singular y con la primera letra en mayuscula
+Nota.- es necesario crear modelos para filtrar los datos mediante el ORM
+---------comando: php artisan make:model Category
+Variacion del comando 
+comando: php artisan make:model Category -ms 
+esta variacion hace que se cree su migracion "m"
+esta variacion hace que se cree el seeder "s"
+
+UNA TABLA PIVOT NO TIENE UN MODELO PORQUE ES UNA ASOCIACION ENTRE DOS TABLAS, la tabla pivot se define usando una funcion de relacion que se define dentro de sus modelos de relacion
+
+NOTA .- una relacion sin tabla pivot intermedia entre dos tablas usa esta notacion 
+columnaDeLaTabla=>tablaModelo::all()->random()->id;
+ejemplo.-
+
+--------------------------------------------------------
+convencion para los controladores.-
+php artisan make:controller UserController
