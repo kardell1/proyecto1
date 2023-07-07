@@ -1,0 +1,7 @@
+Kevin david silva rodriguez
+Descripcion del proyecto 
+prorgama de administracion de una tienda , se intentaba tener un registro de inventario desde la base de datos que permita hacer un crud basico 
+la base de datos cuenta con tablas pivot porque un producto podia tener varios colores y varios colores podrian tener asociados varios productos 
+el crud es visible en la opcion de productos y no esta implementado en mas carpetas por falta de tiempo 
+pero el crud es funcional.
+
